@@ -1,7 +1,7 @@
 {
   "functions": [
     {
-      "source": "functions",
+      "source": "dist/apps/functions",
       "codebase": "default",
       "ignore": [
         "node_modules",
@@ -10,8 +10,8 @@
         "firebase-debug.*.log"
       ],
       "predeploy": [
-        "npm --prefix \"$RESOURCE_DIR\" run lint",
-        "npm --prefix \"$RESOURCE_DIR\" run build"
+        "npx nx run functions:lint",
+        "npx nx run functions:build:production"
       ]
     }
   ],
